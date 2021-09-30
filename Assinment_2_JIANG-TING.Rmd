@@ -1,0 +1,27 @@
+---
+title: "Rmarkdown-assignment"
+author: "jiang ting"
+date: "2021/9/30"
+output:
+  pdf_document: default
+  word_document: default
+  html_document:
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an **R Markdown** document. In a code chunk make a data frame from the air quality dataset. In the same chunk clean the dataset from NA values. Knit the *RMarkdown* file and make a PDF file:
+
+```
+airquality[1:6,]
+good <- complete.cases(airquality)
+good
+airquality[good,][1:6,]
+```
+
+
