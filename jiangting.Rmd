@@ -1,0 +1,33 @@
+---
+title: "assignment2-jiangting"
+author: "jiang ting"
+date: "2021/10/1"
+output:
+  pdf_document: default
+  word_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an **R Markdown** document. In a code chunk make a data frame from the air quality dataset. In the same chunk clean the dataset from NA values. Knit the *RMarkdown file and make a PDF file*:
+
+```{r cars}
+airquality[1:6,]  ###extract the 1:6rows of matrix(airquality)
+good <- complete.cases(airquality) ###extract the non-NA data from matrix airquality
+good
+airquality[good,][1:6,]
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r airquality, echo=FALSE}
+plot(airquality)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
