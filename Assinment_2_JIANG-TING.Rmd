@@ -15,13 +15,24 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## R Markdown
 
-This is an **R Markdown** document. In a code chunk make a data frame from the air quality dataset. In the same chunk clean the dataset from NA values. Knit the *RMarkdown* file and make a PDF file:
+This is an **R Markdown** document. In a code chunk make a data frame from the air quality dataset. In the same chunk clean the dataset from NA values. Knit the *RMarkdown file and make a PDF file*:
 
 ```
-airquality[1:6,]
-good <- complete.cases(airquality)
+airquality[1:6,]  ###extract the 1:6rows of matrix(airquality)
+good <- complete.cases(airquality)  ###extract the non-NA data from matrix airquality
 good
 airquality[good,][1:6,]
 ```
+## results
+
+### airquality[good,][1:6,]
+  Ozone Solar.R Wind Temp Month Day
+1    41     190  7.4   67     5   1
+2    36     118  8.0   72     5   2
+3    12     149 12.6   74     5   3
+4    18     313 11.5   62     5   4
+7    23     299  8.6   65     5   7
+8    19      99 13.8   59     5   8
+
 
 
